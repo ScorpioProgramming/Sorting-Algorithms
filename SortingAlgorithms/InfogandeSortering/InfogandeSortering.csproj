@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bubblesort.cs" />
     <Compile Include="Insertionsort.cs" />
     <Compile Include="Mergsort.cs" />
     <Compile Include="Program.cs" />

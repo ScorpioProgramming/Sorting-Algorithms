@@ -8,7 +8,7 @@ namespace InfogandeSortering
 {
     class Insertionsort
     {
-        public void InsertionSort(int[] lista)
+        public static void InsertionSort(int[] lista)
         {
             int i, n;
             int length = lista.Length;
