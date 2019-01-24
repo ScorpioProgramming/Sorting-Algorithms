@@ -13,37 +13,55 @@ namespace InfogandeSortering
             QuickSort(a, 0, a.Length - 1);
         }
 
-        private static void QuickSort(int[] a, int start, int end)
+        private static void QuickSort(int[] a, int left, int right)
         {
-            if (start >= end)
+            if (left < right)
             {
-                return;
+                int pivot = Partition(a, left, right);
+
+                if (pivot > 1)
+                {
+                    QuickSort(a, left, pivot - 1);
+                }
+                if (pivot + 1 < right)
+                {
+                    QuickSort(a, pivot + 1, right);
+                }
             }
 
-            int num = a[start];
+        }
 
-            int i = start, j = end;
-
-            while (i < j)
+        private static int Partition(int[] a, int left, int right)
+        {
+            int pivot = a[left];
+            while (true)
             {
-                while (i < j && a[j] > num)
+
+                while (a[left] < pivot)
                 {
-                    j--;
+                    left++;
                 }
 
-                a[i] = a[j];
-
-                while (i < j && a[i] < num)
+                while (a[right] > pivot)
                 {
-                    i++;
+                    right--;
                 }
 
-                a[j] = a[i];
+                if (left < right)
+                {
+                    if (a[left] == a[right]) return right;
+
+                    int temp = a[left];
+                    a[left] = a[right];
+                    a[right] = temp;
+
+
+                }
+                else
+                {
+                    return right;
+                }
             }
-
-            a[i] = num;
-            QuickSort(a, start, i - 1);
-            QuickSort(a, i + 1, end);
         }
     }
 }

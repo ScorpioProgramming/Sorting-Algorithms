@@ -48,6 +48,10 @@ namespace InfogandeSortering
             double Ltime = -1;
             double Mtime = -1;
 
+            double Fastest10;
+            double Fastest1000;
+            double Fastest100000;
+
             for (int i = 0; i < 10; i++)    //Adding numbers to the arrays of 10
             {
                 a[i] = tal.Next(0, 1000000);
@@ -202,7 +206,7 @@ namespace InfogandeSortering
             Console.WriteLine("Mergsort:");
             Console.WriteLine("Array with 10 elements took: " + Gtime + " ns");
             Console.WriteLine("Array with 1000 elements took: " + Htime + " ns");
-            Console.WriteLine("Array with 100000 elements took: " + Htime + " ns");
+            Console.WriteLine("Array with 100000 elements took: " + Jtime + " ns");
 
             Console.WriteLine("\n");
             Console.WriteLine("Quicksort:");
@@ -210,7 +214,70 @@ namespace InfogandeSortering
             Console.WriteLine("Array with 1000 elements took: " + Ltime + " ns");
             Console.WriteLine("Array with 100000 elements took: " + Mtime + " ns");
 
-            Console.ReadLine(); //So that we can look through all of the diffrent times, and see what algorithm were the fastest.
+            if(Atime < Dtime && Atime < Gtime && Atime < Ktime) //Looking for fastest sortingalgorithm for 10 elements
+            {
+                Fastest10 = Atime;
+            }
+            else if(Dtime < Atime && Dtime < Gtime && Dtime < Ktime)
+            {
+                Fastest10 = Dtime;
+            }
+            else if (Gtime < Atime && Gtime < Dtime && Gtime < Ktime)
+            {
+                Fastest10 = Gtime;
+            }
+            else
+            {
+                Fastest10 = Ktime;
+            }
+
+            if (Btime < Etime && Btime < Htime && Btime < Ltime)    //Looking for fastest sortingalgorithm for 1000 elements
+            {
+                Fastest1000 = Btime;
+            }
+            else if (Etime < Btime && Etime < Htime && Etime < Ltime)
+            {
+                Fastest1000 = Etime;
+            }
+            else if (Htime < Btime && Htime < Etime && Htime < Ltime)
+            {
+                Fastest1000 = Htime;
+            }
+            else
+            {
+                Fastest1000 = Ltime;
+            }
+
+            if (Ctime < Ftime && Ctime < Jtime && Ctime < Mtime)    //Looking for fastest sorting algorithm for 100000 elements
+            {
+                Fastest100000 = Ctime;
+            }
+            else if (Ftime < Ctime && Ftime < Jtime && Ftime < Mtime)
+            {
+                Fastest100000 = Ftime;
+            }
+            else if (Jtime < Ctime && Jtime < Ftime && Jtime < Mtime)
+            {
+                Fastest100000 = Jtime;
+            }
+            else
+            {
+                Fastest100000 = Mtime;
+            }
+
+            Console.WriteLine("/n");
+            Console.WriteLine("Fastest sorting algorithm for 10 elements: ");
+            Console.WriteLine(Fastest10);
+
+            Console.WriteLine("/n");
+            Console.WriteLine("Fastest sorting algorithm for 1000 elements: ");
+            Console.WriteLine(Fastest1000);
+
+            Console.WriteLine("/n");
+            Console.WriteLine("Fastest sorting algorithm for 100000 elements: ");
+            Console.WriteLine(Fastest100000);
+
+            Console.ReadLine(); 
         }
     }
 }
