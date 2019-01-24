@@ -28,7 +28,6 @@ namespace InfogandeSortering
                     QuickSort(a, pivot + 1, right);
                 }
             }
-
         }
 
         private static int Partition(int[] a, int left, int right)
@@ -36,7 +35,6 @@ namespace InfogandeSortering
             int pivot = a[left];
             while (true)
             {
-
                 while (a[left] < pivot)
                 {
                     left++;
@@ -54,8 +52,6 @@ namespace InfogandeSortering
                     int temp = a[left];
                     a[left] = a[right];
                     a[right] = temp;
-
-
                 }
                 else
                 {

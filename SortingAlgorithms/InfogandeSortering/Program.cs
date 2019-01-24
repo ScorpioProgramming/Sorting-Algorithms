@@ -81,9 +81,10 @@ namespace InfogandeSortering
             Console.WriteLine("Press ENTER to START!");
             Console.ReadLine(); //User has to press enter to start the sorting. Has to do that for all of the other sorting parts aswell.
 
+            //hur man anropar en metod i en class: (classnamn.metodnamn(arraynamn))
             Console.WriteLine("Bubblesort with 10 numbers");
             sw.Start();
-            Bubblesort.BubbleSort(a);    //start sorting(Bubblesort)  (classnamn.metodnamn(arraynamn))
+            Bubblesort.BubbleSort(a);    //start sorting(Bubblesort)
             sw.Stop();
             Atime = sw.ElapsedTicks * nanosecPerTick;
             Console.WriteLine(sw.ElapsedTicks * nanosecPerTick + " ns");
@@ -265,15 +266,15 @@ namespace InfogandeSortering
                 Fastest100000 = Mtime;
             }
 
-            Console.WriteLine("/n");
+            Console.WriteLine("\n");
             Console.WriteLine("Fastest sorting algorithm for 10 elements: ");
             Console.WriteLine(Fastest10);
 
-            Console.WriteLine("/n");
+            Console.WriteLine("\n");
             Console.WriteLine("Fastest sorting algorithm for 1000 elements: ");
             Console.WriteLine(Fastest1000);
 
-            Console.WriteLine("/n");
+            Console.WriteLine("\n");
             Console.WriteLine("Fastest sorting algorithm for 100000 elements: ");
             Console.WriteLine(Fastest100000);
 

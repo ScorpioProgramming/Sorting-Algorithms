@@ -16,6 +16,7 @@ namespace InfogandeSortering
 
             if (length < 2)
                 return;
+
             for (n = 1; n < length; n++)
             {
                 temp = lista[n];
