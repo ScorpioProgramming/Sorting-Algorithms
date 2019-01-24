@@ -67,7 +67,7 @@ namespace InfogandeSortering
             Console.ReadLine(); //User has to press enter to start the sorting. Has to do that for all of the other sorting parts aswell.
             Console.WriteLine("Insertionsort with 10 numbers");
             sw.Start();
-                //start sorting(Insertionsort)
+                //start sorting(Insertionsort) (classnamn.metodnamn(arraynamn))
             sw.Stop();
             Atime = sw.ElapsedTicks * nanosecPerTick;
             Console.WriteLine(sw.ElapsedTicks * nanosecPerTick + " ns");
