@@ -77,7 +77,6 @@ namespace InfogandeSortering
             }
 
             Console.WriteLine("Sorting algorithms timed tests");    //Writing out the type of sorting algorithm and the amount of elements inside of that array. First with 10 numbers in each array, then 1000 numbers and at last 100000 numbers.
-            Thread.Sleep(2000); //Wait 2 seconds
             Console.WriteLine("Press ENTER to START!");
             Console.ReadLine(); //User has to press enter to start the sorting. Has to do that for all of the other sorting parts aswell.
 
@@ -86,8 +85,8 @@ namespace InfogandeSortering
             sw.Start();
             Bubblesort.BubbleSort(a);    //start sorting(Bubblesort)
             sw.Stop();
-            Atime = sw.ElapsedTicks * nanosecPerTick;
-            Console.WriteLine(sw.ElapsedTicks * nanosecPerTick + " ns");
+            Atime = sw.Elapsed.TotalSeconds;
+            Console.WriteLine(sw.Elapsed.TotalSeconds + " s");
             sw.Reset();
             Console.ReadLine();
 
@@ -95,8 +94,8 @@ namespace InfogandeSortering
             sw.Start();
             Insertionsort.InsertionSort(d);    //start sorting(Insertionsort)
             sw.Stop();
-            Dtime = sw.ElapsedTicks * nanosecPerTick;
-            Console.WriteLine(sw.ElapsedTicks * nanosecPerTick + " ns");
+            Dtime = sw.Elapsed.TotalSeconds;
+            Console.WriteLine(sw.Elapsed.TotalSeconds + " s");
             sw.Reset();
             Console.ReadLine();
 
@@ -104,8 +103,8 @@ namespace InfogandeSortering
             sw.Start();
             Mergsort.MergeSort(g);    //start sorting(Mergsort)
             sw.Stop();
-            Gtime = sw.ElapsedTicks * nanosecPerTick;
-            Console.WriteLine(sw.ElapsedTicks * nanosecPerTick + " ns");
+            Gtime = sw.Elapsed.TotalSeconds;
+            Console.WriteLine(sw.Elapsed.TotalSeconds + " s");
             sw.Reset();
             Console.ReadLine();
 
@@ -113,8 +112,8 @@ namespace InfogandeSortering
             sw.Start();
             Quicksort.QuickSort(k);    //start sorting(Quicksort)
             sw.Stop();
-            Ktime = sw.ElapsedTicks * nanosecPerTick;
-            Console.WriteLine(sw.ElapsedTicks * nanosecPerTick + " ns");
+            Ktime = sw.Elapsed.TotalSeconds;
+            Console.WriteLine(sw.Elapsed.TotalSeconds + " s");
             sw.Reset();
             Console.ReadLine();
 
@@ -122,8 +121,8 @@ namespace InfogandeSortering
             sw.Start();
             Bubblesort.BubbleSort(b);    //start sorting(Bubblesort)
             sw.Stop();
-            Btime = sw.ElapsedTicks * nanosecPerTick;
-            Console.WriteLine(sw.ElapsedTicks * nanosecPerTick + " ns");
+            Btime = sw.Elapsed.TotalSeconds;
+            Console.WriteLine(sw.Elapsed.TotalSeconds + " s");
             sw.Reset();
             Console.ReadLine();
 
@@ -131,8 +130,8 @@ namespace InfogandeSortering
             sw.Start();
             Insertionsort.InsertionSort(e);    //start sorting(Insertionsort)
             sw.Stop();
-            Etime = sw.ElapsedTicks * nanosecPerTick;
-            Console.WriteLine(sw.ElapsedTicks * nanosecPerTick + " ns");
+            Etime = sw.Elapsed.TotalSeconds;
+            Console.WriteLine(sw.Elapsed.TotalSeconds + " s");
             sw.Reset();
             Console.ReadLine();
 
@@ -140,8 +139,8 @@ namespace InfogandeSortering
             sw.Start();
             Mergsort.MergeSort(h);    //start sorting(Mergsort)
             sw.Stop();
-            Htime = sw.ElapsedTicks * nanosecPerTick;
-            Console.WriteLine(sw.ElapsedTicks * nanosecPerTick + " ns");
+            Htime = sw.Elapsed.TotalSeconds;
+            Console.WriteLine(sw.Elapsed.TotalSeconds + " s");
             sw.Reset();
             Console.ReadLine();
 
@@ -149,8 +148,8 @@ namespace InfogandeSortering
             sw.Start();
             Quicksort.QuickSort(l);    //start sorting(Quicksort)
             sw.Stop();
-            Ltime = sw.ElapsedTicks * nanosecPerTick;
-            Console.WriteLine(sw.ElapsedTicks * nanosecPerTick + " ns");
+            Ltime = sw.Elapsed.TotalSeconds;
+            Console.WriteLine(sw.Elapsed.TotalSeconds + " s");
             sw.Reset();
             Console.ReadLine();
 
@@ -158,8 +157,8 @@ namespace InfogandeSortering
             sw.Start();
             Bubblesort.BubbleSort(c);    //start sorting(Bubblesort)
             sw.Stop();
-            Ctime = sw.ElapsedTicks * nanosecPerTick;
-            Console.WriteLine(sw.ElapsedTicks * nanosecPerTick + " ns");
+            Ctime = sw.Elapsed.TotalSeconds;
+            Console.WriteLine(sw.Elapsed.TotalSeconds + " s");
             sw.Reset();
             Console.ReadLine();
 
@@ -167,8 +166,8 @@ namespace InfogandeSortering
             sw.Start();
             Insertionsort.InsertionSort(f);    //start sorting(Insertionsort)
             sw.Stop();
-            Ftime = sw.ElapsedTicks * nanosecPerTick;
-            Console.WriteLine(sw.ElapsedTicks * nanosecPerTick + " ns");
+            Ftime = sw.Elapsed.TotalSeconds;
+            Console.WriteLine(sw.Elapsed.TotalSeconds + " s");
             sw.Reset();
             Console.ReadLine();
 
@@ -176,8 +175,8 @@ namespace InfogandeSortering
             sw.Start();
             Mergsort.MergeSort(j);    //start sorting(Mergsort)
             sw.Stop();
-            Jtime = sw.ElapsedTicks * nanosecPerTick;
-            Console.WriteLine(sw.ElapsedTicks * nanosecPerTick + " ns");
+            Jtime = sw.Elapsed.TotalSeconds;
+            Console.WriteLine(sw.Elapsed.TotalSeconds + " s");
             sw.Reset();
             Console.ReadLine();
 
@@ -185,35 +184,35 @@ namespace InfogandeSortering
             sw.Start();
             Quicksort.QuickSort(m);    //start sorting(Quicksort) ERROR!!!
             sw.Stop();
-            Mtime = sw.ElapsedTicks * nanosecPerTick;
-            Console.WriteLine(sw.ElapsedTicks * nanosecPerTick + " ns");
+            Mtime = sw.Elapsed.TotalSeconds;
+            Console.WriteLine(sw.Elapsed.TotalSeconds + " s");
             sw.Reset();
             Console.ReadLine();
 
             //Write out all of the times categorized by type of sorting. Strating from Insertonsort to Quicksort.
             Console.WriteLine("\n");
             Console.WriteLine("Bubblesort:");
-            Console.WriteLine("Array with 10 elements took: " + Atime + " ns");
-            Console.WriteLine("Array with 1000 elements took: " + Btime + " ns");
-            Console.WriteLine("Array with 100000 elements took: " + Ctime + " ns");
+            Console.WriteLine("Array with 10 elements took: " + Atime + " s");
+            Console.WriteLine("Array with 1000 elements took: " + Btime + " s");
+            Console.WriteLine("Array with 100000 elements took: " + Ctime + " s");
 
             Console.WriteLine("\n");
             Console.WriteLine("Insertionsort:");
-            Console.WriteLine("Array with 10 elements took: " + Dtime + " ns");
-            Console.WriteLine("Array with 1000 elements took: " + Etime + " ns");
-            Console.WriteLine("Array with 100000 elements took: " + Ftime + " ns");
+            Console.WriteLine("Array with 10 elements took: " + Dtime + " s");
+            Console.WriteLine("Array with 1000 elements took: " + Etime + " s");
+            Console.WriteLine("Array with 100000 elements took: " + Ftime + " s");
 
             Console.WriteLine("\n");
             Console.WriteLine("Mergsort:");
-            Console.WriteLine("Array with 10 elements took: " + Gtime + " ns");
-            Console.WriteLine("Array with 1000 elements took: " + Htime + " ns");
-            Console.WriteLine("Array with 100000 elements took: " + Jtime + " ns");
+            Console.WriteLine("Array with 10 elements took: " + Gtime + " s");
+            Console.WriteLine("Array with 1000 elements took: " + Htime + " s");
+            Console.WriteLine("Array with 100000 elements took: " + Jtime + " s");
 
             Console.WriteLine("\n");
             Console.WriteLine("Quicksort:");
-            Console.WriteLine("Array with 10 elements took: " + Ktime + " ns");
-            Console.WriteLine("Array with 1000 elements took: " + Ltime + " ns");
-            Console.WriteLine("Array with 100000 elements took: " + Mtime + " ns");
+            Console.WriteLine("Array with 10 elements took: " + Ktime + " s");
+            Console.WriteLine("Array with 1000 elements took: " + Ltime + " s");
+            Console.WriteLine("Array with 100000 elements took: " + Mtime + " s");
 
             if(Atime < Dtime && Atime < Gtime && Atime < Ktime) //Looking for fastest sortingalgorithm for 10 elements
             {

@@ -8,7 +8,7 @@ namespace InfogandeSortering
 {
     class Mergsort
     {
-        public static void MergeSort(int[] input, int low, int high)
+        private static void MergeSort(int[] input, int low, int high)
         {
             if (low < high)
             {

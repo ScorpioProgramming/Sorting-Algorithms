@@ -10,17 +10,17 @@ namespace InfogandeSortering
     {
         public static void InsertionSort(int[] lista)
         {
-            int i, n;
+            int i, j;
             int length = lista.Length;
             int temp;
 
             if (length < 2)
                 return;
 
-            for (n = 1; n < length; n++)
+            for (j = 1; j < length; j++)
             {
-                temp = lista[n];
-                i = n - 1;
+                temp = lista[j];
+                i = j - 1;
 
                 while (i >= 0 && lista[i] > temp)
                 {
